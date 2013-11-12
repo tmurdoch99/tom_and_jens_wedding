@@ -1,0 +1,12 @@
+<%= simple_form_for(@menu) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.select :choice, options_for_select([["Meat", "Meat"], ["Veg", "veg"], ["Child", "Child"]]) %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,43 @@
+<h3 style="text-align: center;">Data Table</h3>
+						<div class="g-hr type_invisible"></div>
+						
+<p id="notice"><%= notice %></p>
+
+
+
+						<!-- Table -->
+						<table class="g-table">
+							<thead>
+								<tr>
+                                    <th>Name</th>
+									<th>attending</th>
+									
+								</tr>
+							</thead>
+                            <tbody>
+								<tr>
+									<td><%= @attending.name %></td>
+									<td><%=@attending.attending1 %></td>
+									
+								</tr>
+								<tr>
+									<td><%= @attending.name1 %></td>
+									<td><%= @attending.attending1 %></td>
+									
+								</tr>
+								<tr>
+									<td><%= @attending.name2 %></td>
+									<td><%=@attending.attending2 %></td>
+									
+								</tr>
+								<tr>
+									<td><%= @attending.name3 %></td>
+									<td><%= @attending.attending3 %></td>
+									
+								</tr>
+								<%= link_to 'Edit', edit_rsvp_path(@rsvp) %> |
+                            <%= link_to 'Back', rsvps_path %>
+							</tbody>
+							</table>
+</div>
+</div>

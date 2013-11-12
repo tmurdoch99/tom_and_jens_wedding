@@ -1,0 +1,134 @@
+﻿
+
+				<div class="l-submain type_fullwidth">
+					<div class="l-submain-h g-html i-cf">
+					
+						<div class="w-map">
+							<div class="w-map-h" style="height: 300px;">
+							<%= image_tag("portvell.jpg", :class=>"w-map-h", :style=>"300px;") %>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				
+				<div class="l-submain">
+					<div class="l-submain-h g-html i-cf">
+					<p id="notice"><%= notice %></p>
+						<div class="g-cols">
+							<div class="one-third">
+							
+								<h3>Contact Info</h3>
+								
+								<div class="w-contacts">
+									<div class="w-contacts-h">
+										<div class="w-contacts-list">
+											<div class="w-contacts-item for_address">
+												<i class="icon-location"></i>
+												<span class="w-contacts-item-name">Questions: </span>
+												<span class="w-contacts-item-value"> If you have any questions or problems or want to clarify anything dont hesitate to call me or Jen, or if your at work then email ;) </span>
+											</div>
+											<div class="w-contacts-item for_phone">
+												<i class="icon-mobile"></i>
+												<span class="w-contacts-item-name">Phone:</span>
+												<span class="w-contacts-item-value">+44 7976884486</span>
+											</div>
+											<div class="w-contacts-item for_email">
+												<i class="icon-mail"></i>
+												<span class="w-contacts-item-name">Email:</span>
+												<span class="w-contacts-item-value"><a href="mailto:tmurdoch_99@yahoo.com">tmurdoch_99@yahoo.com</a></span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="g-hr">
+									<span class="g-hr-h">
+										<i class="icon-star"></i>
+									</span>
+								</div>
+								
+								
+								
+								
+							</div>
+							<div class="two-thirds">
+							
+								<h3>RSVP</h3>
+								<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+							<form class="g-form"  id="contact_form">
+<%= simple_form_for(@rsvp) do |f| %>
+  <%= f.error_notification %>
+								<form class="g-form"  id="contact_form">
+									<div class="g-alert type_success with_close" id="contact_form_success_message" style="opacity: 0; display: none;">
+										<div class="g-alert-close"> &#10005; </div>
+										<div class="g-alert-body">
+											<p><b>Thank You!</b> Your message was sent.</p>
+										</div>
+									</div>
+									<div class="g-alert type_error with_close" id="contact_form_error_message" style="opacity: 0; display: none;">
+										<div class="g-alert-close"> &#10005; </div>
+										<div class="g-alert-body">
+											<p></p>
+										</div>
+									</div>
+									<div class="g-form-group">
+										<div class="g-form-group-rows">
+											<div class="g-form-row" id="name_row">
+												<div class="g-form-row-label">
+													<%= f.label :name1, 'Name', :class => 'g-form-row-label-h' %> 
+												</div>
+												<div class="g-form-row-field">
+													<%= f.text_field :name1, :placeholder => current_user.name %>
+												</div>
+												<div class="g-form-row-state" id="name_state"></div>
+											</div>
+											<div class="g-form-row" id="name_row">
+												<div class="g-form-row-label">
+													 <%= f.label :name2, "Name of guest" %>
+												</div>
+												<div class="g-form-row-field">
+													<%= f.text_field :name2 %>
+												</div>
+												<div class="g-form-row-state" id="name_state"></div>
+											</div>
+											<div class="g-form-row" id="name_row">
+												<div class="g-form-row-label">
+												<%= f.label :name3, "Name of guest" %>
+												</div>
+												<div class="g-form-row-field">
+												<%= f.text_field :name3 %>
+												</div>
+												<div class="g-form-row-state" id="name_state"></div>
+											</div>
+											<div class="g-form-row" id="name_row">
+												<div class="g-form-row-label">
+														<%= f.label :name4, "Name of guest" %>
+												</div>
+												<div class="g-form-row-field">
+													<%= f.text_field :name4 %>
+												</div>
+												<div class="g-form-row-state" id="name_state"></div>
+											</div>
+											<div class="g-form-row">
+												<div class="g-form-row-label"></div>
+												 <div class="form-actions">
+												 <%= f.button :submit %>
+												 </div>
+												 <% end %>
+											</div>
+										</div>
+									</div>
+								</form>
+								
+								</div>
+  
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!-- /MAIN -->

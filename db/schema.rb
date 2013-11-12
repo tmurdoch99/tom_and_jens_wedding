@@ -11,7 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131021151818) do
+ActiveRecord::Schema.define(:version => 20131109113746) do
+
+  create_table "attendings", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "attending"
+    t.string   "name1"
+    t.string   "attending1"
+    t.string   "name2"
+    t.string   "attending2"
+    t.string   "name3"
+    t.string   "attending3"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "menus", :force => true do |t|
+    t.string   "name"
+    t.string   "choice"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
@@ -23,6 +44,19 @@ ActiveRecord::Schema.define(:version => 20131021151818) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], :name => "index_roles_on_name"
+
+  create_table "rsvps", :force => true do |t|
+    t.string   "name1"
+    t.string   "attending1"
+    t.string   "name2"
+    t.string   "attending2"
+    t.string   "name3"
+    t.string   "attending3"
+    t.string   "name4"
+    t.string   "attending4"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

@@ -1,0 +1,35 @@
+<div class="l-submain">
+					<div class="l-submain-h g-html">
+
+<h1>Listing RSVPs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Attending</th>
+    
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @attendings.each do |attending| %>
+  <tr>
+   <tr> <td><%= attending.name %></td>
+    <td><%= attending.attending %></td></tr>
+   <tr><td><%= attending.name1 %></td>
+    <td><%= attending.attending1 %></td></tr>
+   <tr> <td><%= attending.name2 %></td>
+    <td><%= attending.attending2 %></td></tr>
+    <tr><td><%= attending.name3 %></td>
+    <td><%= attending.attending3 %></td></tr>
+    <tr><td><%= link_to 'Show', attending %></td>
+    <td><%= link_to 'Edit', edit_attending_path(attending) %></td>
+    <td><%= link_to 'Destroy', attending, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Attending', new_attending_path %>

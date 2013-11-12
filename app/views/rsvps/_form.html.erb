@@ -1,0 +1,72 @@
+<form class="g-form"  id="contact_form">
+<%= simple_form_for(@rsvp) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs ">
+    
+	<%= f.label :name1, "Name" %>
+    <%= f.text_field :name1, :placeholder => current_user.name %>
+	<div>
+	<div class="form-inputs form-inline ">
+    <%= f.label :name1, "Are you attending?" %>
+	<%= f.radio_button(:attending1, "Yes") %>
+      <%= f.label(:attending1, "Yes") %>
+	  <%= f.radio_button(:attending1, "No") %>
+      <%= f.label(:attending1, "No") %>
+    </div>
+    
+
+   Add another guest <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"><br>
+   <div id="ifYes" style="display:none">
+    <%= f.label :name2, "Name of guest" %>
+    <%= f.text_field :name2 %>
+   
+	
+	<div class="form-inputs form-inline ">
+	 <%= f.label :name1, "Are they attending?" %>
+	<%= f.radio_button(:attending2, "Yes") %>
+      <%= f.label(:attending2, "Yes") %>
+	  <%= f.radio_button(:attending2, "No") %>
+      <%= f.label(:attending2, "No") %>
+    </div>
+</div>
+   
+	<%= f.label :name2, "Name of guest" %>
+    <%= f.text_field :name2 %>
+   
+	
+	<div class="form-inputs form-inline ">
+	 <%= f.label :name1, "Are they attending?" %>
+	<%= f.radio_button(:attending2, "Yes") %>
+      <%= f.label(:attending2, "Yes") %>
+	  <%= f.radio_button(:attending2, "No") %>
+      <%= f.label(:attending2, "No") %>
+    </div>
+	
+	<%= f.label :name3, "Name of guest" %>
+    <%= f.text_field :name3 %>
+   
+   
+   <div class="form-inputs form-inline ">
+    <%= f.label :name1, "Are they attending?" %>
+	<%= f.radio_button(:attending3, "Yes") %>
+      <%= f.label(:attending3, "Yes") %>
+	  <%= f.radio_button(:attending3, "No") %>
+      <%= f.label(:attending3, "No") %>
+     </div>
+	<%= f.label :name4, "Name of guest" %>
+    <%= f.text_field :name4 %>
+
+	
+	<div class="form-inputs form-inline ">
+	 <%= f.label :name1, "Are they attending?" %>
+	<%= f.radio_button(:attending3, "Yes") %>
+      <%= f.label(:attending3, "Yes") %>
+	  <%= f.radio_button(:attending3, "No") %>
+      <%= f.label(:attending3, "No") %>
+  </div>
+</div>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
