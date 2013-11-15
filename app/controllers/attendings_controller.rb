@@ -14,25 +14,30 @@ class AttendingsController < ApplicationController
   # GET /attendings/1
   # GET /attendings/1.json
   def show
+ if signed_in?
+  @has_made_rsvp = current_user.attendings(:name).present?
     @attending = Attending.find(params[:id])
-
+  
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @attending }
     end
+	 end
   end
 
   # GET /attendings/new
   # GET /attendings/new.json
   def new
-    @attending = Attending.new
+   
+	@attending = Attending.new
+    
 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @attending }
-    end
+   
   end
-
+end
   # GET /attendings/1/edit
   def edit
     @attending = Attending.find(params[:id])

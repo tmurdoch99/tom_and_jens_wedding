@@ -7,7 +7,7 @@
 													<%= f.label :name, 'Name', :class => 'g-form-row-label-h' %> 
 												</div>
 												<div class="g-form-row-field">
-													<%= f.text_field :name, :placeholder => current_user.name %>
+													<%= f.text_field :name, :value => current_user.name %>
 												</div>
 												<div class="g-form-row-state" id="name_state"></div>
 											
@@ -79,7 +79,7 @@
 											<div class="g-form-row">
 												<div class="g-form-row-label"></div>
 												 <div class="form-actions">
-												 <%= f.button :submit %>
+												 <%= f.button :submit, 'RSVP' %>
 												 </div>
 												 <% end %>
 											</div>

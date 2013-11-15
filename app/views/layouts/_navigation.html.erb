@@ -1,4 +1,4 @@
-		          		<!-- HEADER -->
+		<!-- HEADER -->
 		<div class="l-header">
 			<div class="l-header-h">
 
@@ -7,12 +7,12 @@
 					
 						<!-- LOGO -->
 						<div class="w-logo">
-							<div class="w-logo-h">
+							<div class="w-logo-h" "padding-top: 10px;">
 								
 									
-									<span class="w-logo-title">
-										<a href="/" class="w-logo-title">Tom And Jens Wedding</a>
-									</span>
+									
+										<%= image_tag("tomandjen.png") %>
+								
 								
 							</div>
 						</div>
@@ -29,13 +29,17 @@
 									<div class="w-nav-list-h">
 										<div class="w-nav-item level_1 with_sublevel">
 											<div class="w-nav-item-h">
-												<a href="/" class="w-nav-anchor level_1">Home</a> 
+												<%= link_to "Home", root_path, :class => 'w-nav-anchor level_1' %> 
 													
 												
 												
 											</div>
 										</div>
- 										<div class="w-nav-item level_1 with_sublevel">
+										<% if user_signed_in? %>
+										<% if @has_made_rsvp  %>
+ 										
+										<% else %>
+										<div class="w-nav-item level_1 with_sublevel">
 											<div class="w-nav-item-h">
 												<a href="/rsvp" class="w-nav-anchor level_1">
 													<span class="w-nav-icon"><i class="icon-star"></i></span>
@@ -45,6 +49,7 @@
 												
 											</div>
 										</div>
+										<% end %>
 
  										<div class="w-nav-item level_1 with_sublevel">
 											<div class="w-nav-item-h">
@@ -80,7 +85,7 @@
 												
 											</div>
 										</div>
-										<div class="w-nav-item level_1">
+									<!-- 	<div class="w-nav-item level_1">
 											<div class="w-nav-item-h">
 												<a href="features.html" class="w-nav-anchor level_1">
 													<span class="w-nav-icon"><i class="icon-star"></i></span>
@@ -88,7 +93,9 @@
 													<span class="w-nav-hint"></span>
 												</a>
 											</div>
-										</div>
+										</div> -->
+										<% end %>
+										<% if user_signed_in? %>
 										<div class="w-nav-item level_1 with_sublevel">
 											<div class="w-nav-item-h">
 												<a href="#" class="w-nav-anchor level_1">
@@ -101,21 +108,53 @@
 													<div class="w-nav-list-h">
 														<div class="w-nav-item level_2">
 															<div class="w-nav-item-h">
-															 <a href="/users/edit" class="w-nav-anchor level_2">Edit account</a>
+															 <%= link_to 'Edit account', edit_user_registration_path, :class=>"w-nav-anchor level_2" %>
 															</div>
 														</div>
 														<div class="w-nav-item level_2">
 															<div class="w-nav-item-h">
-																<a href="/users/sign_out" class="w-nav-anchor level_2" data-method="delete" rel="nofollow">Logout</a>
+																<%= link_to 'Logout', destroy_user_session_path, :method=>'delete', :class=>"w-nav-anchor level_2" %>
 															</div>
 														</div>
-										             </div>
-									            </div> 
+														<% if current_user.has_role? :admin %>
+														<div class="w-nav-item level_2">
+															<div class="w-nav-item-h">
+																<%= link_to 'Admin', users_path , :class=>"w-nav-anchor level_2" %>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<% end %>
 										
-										    </div>
+										<% else %>
+										
+ 										<div class="w-nav-item level_1">
+											<div class="w-nav-item-h">
+												<%= link_to 'Login', new_user_session_path, :class=>"w-nav-anchor level_1" %>
+													
+												
+											</div>
+										</div>
+								        
+								       <div class="w-nav-item level_1">
+											<div class="w-nav-item-h">
+												<%= link_to 'Sign up', new_user_registration_path, :class=>"w-nav-anchor level_1" %>
+													
+												
+											</div>
+										</div>  
+										
+										<% end %>
+										
+									          
+										 </div>
+									   
+										
 									    </div>
 								    </div>
-							    </div>
+							   
 						      </div>
 						   </nav>
 					    </div>
@@ -123,5 +162,5 @@
 
 			    </div>
 		    </div>
-		</div>	
+		
 		<!-- /HEADER -->

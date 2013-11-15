@@ -104,7 +104,7 @@ a {
 	z-index: 1;
 	}	
 	.l-canvas.headerpos_fixed .l-main {
-		padding-top: 90px;
+		padding-top: 60px;
 		}
 		.l-canvas.headerpos_fixed.headertype_extended .l-main {
 			padding-top: 126px;
@@ -1338,7 +1338,8 @@ input[type="submit"] {
 						}
 	/* w-contacts in footer */
 	.l-subfooter .w-contacts {
-		background: url(../img/contact-map.png) no-repeat right bottom;
+		background: url(/assets/contact-map.png) no-repeat right bottom;
+
 		}
 		.l-subfooter .w-contacts-item i {
 			display: none;
@@ -1676,6 +1677,7 @@ input[type="submit"] {
 	}
 	.w-logo-h {
 		height: 100%;
+		padding-top: 15px;
 		}
 		.w-logo-link {
 			display: block;
