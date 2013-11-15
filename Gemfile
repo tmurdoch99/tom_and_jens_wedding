@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 ruby '1.9.3'
 gem 'rails', '3.2.13'
 
-gem 'pg', group: [:production]
+gem 'pg'
+gem 'rails_12factor', group: :production
 group :assets do
 
   gem 'sass-rails',   '~> 3.2.3'
@@ -27,7 +28,7 @@ end
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
-  gem 'sqlite3'
+ 
 end
 group :test do
   gem 'capybara'
@@ -36,3 +37,4 @@ group :test do
   gem 'email_spec'
   gem 'launchy'
 end
+ruby '2.0.0'
