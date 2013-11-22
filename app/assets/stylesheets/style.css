@@ -3065,3 +3065,6 @@ ul.flex-direction-nav {
 	-o-transition-duration: 0s;
 	transition-duration: 0s;
 	}
+.barcaback  {
+  background-image: image-url(wallpaper.jpg);
+     }
