@@ -16,7 +16,7 @@ gem 'figaro'
 gem 'rolify'
 gem 'simple_form'
 gem 'font-awesome-less'
-
+gem 'rails_12factor', group: :production
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
@@ -36,3 +36,4 @@ group :test do
   gem 'email_spec'
   gem 'launchy'
 end
+ruby '2.0.0'
