@@ -36,4 +36,3 @@ group :test do
   gem 'email_spec'
   gem 'launchy'
 end
-ruby '2.0.0'
