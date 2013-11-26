@@ -9,7 +9,7 @@ TomAndJensWedding::Application.routes.draw do
   get "static_pages/getting_there"
 
   get "static_pages/barcelona"
-
+get "static_pages/gift"
   resources :menus
 
 
@@ -29,5 +29,5 @@ TomAndJensWedding::Application.routes.draw do
   match '/venue', to: 'static_pages#venue'
   match '/gettingthere', to: 'static_pages#getting_there'
   match '/barcelona', to: 'static_pages#barcelona'
-  
+   match '/gift', to: 'static_pages#gift'
 end

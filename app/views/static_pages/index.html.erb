@@ -48,12 +48,12 @@
 													<div class="w-nav-item level_1">
 														<div class="w-nav-item-h">
 															
-																<span class="w-nav-title">You have RSVP'd!</span>
+																<span class="w-nav-anchor level_1">You have RSVP'd!</span>
 															
 														</div>
 													
 													</div>
-		<% else %>
+		                                      <% else %>
 		
 		
 													<div class="w-nav-item level_1">
@@ -66,7 +66,14 @@
 													</div>
 													<% end %>
 													
-													
+													<div class="w-nav-item level_1">
+														<div class="w-nav-item-h">
+															
+																<%= link_to "Gift List", '/gift', :class=> 'w-nav-anchor level_1'%>
+															
+															
+														</div>
+													</div>
 
 												</div>
 											</div>

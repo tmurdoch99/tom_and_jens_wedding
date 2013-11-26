@@ -23,4 +23,10 @@ class StaticPagesController < ApplicationController
   @has_made_rsvp = current_user.attendings(:name).present?
   end
   end
+  
+   def gift
+  if signed_in?
+  @has_made_rsvp = current_user.attendings(:name).present?
+  end
+  end
 end
