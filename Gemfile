@@ -16,7 +16,7 @@ gem 'figaro'
 gem 'rolify'
 gem 'simple_form'
 gem 'font-awesome-less'
-gem 'forem', '0.0.1'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
